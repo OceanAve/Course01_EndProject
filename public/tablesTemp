@@ -1,0 +1,37 @@
+create table clients(
+    client_id int PRIMARY KEY AUTO_INCREMENT,
+    companyName varchar(255), 
+    streetAddress varchar(255),
+    city varchar(255),
+    state varchar(255),
+    zip varchar(255),
+    firstName varchar(255),
+    lastName varchar(255),
+    email varchar(255),
+    busPhone varchar(16),
+    mobilePhone varchar(255)
+);
+
+create table clientMeetings(
+    client_id int PRIMARY KEY AUTO_INCREMENT, 
+    meeting_id int,
+    meeting_date date,
+    meeting_time time,
+    meeting_location varchar(255),
+    agenda varchar(255),
+    meeting_minutes varchar(255),
+    attendees varchar(255),
+    attendees_names varchar(255),
+    attendees_emails varchar(255)
+    );
+
+    create table projects(
+        project_id int PRIMARY KEY AUTO_INCREMENT, 
+        client_id int,
+        client_name varchar(255),
+        project_name varchar(255),
+        project_description varchar(255),
+        project_due_date date,
+        project_status varchar(255),
+        project_priority int
+    );

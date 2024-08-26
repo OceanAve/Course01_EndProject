@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './client-meetings.component.css'
 })
 export class ClientMeetingsComponent {
-
+  name: string = "Munster";
 }
