@@ -1,1 +1,80 @@
-<h1>Clients works {{name}}!</h1>
+
+    <section class="dispatchDashboard">
+      <div  class="tableContainer">
+        <div class="title">
+          <div class="titleImgContainer">
+            <i class="bi bi-person"></i>
+            <h3>Clients</h3>
+          </div>
+          <a href="/drivers/new">                       
+            <div class="newBtn">
+              <i class="bi bi-plus-circle"></i> New Client
+            </div>
+          </a>  
+        </div>
+        <hr>
+        <table class="dispatchTable searchable table"                     
+        data-sort-name="status:active" 
+        data-sort-order="asc"
+        data-toggle="table" 
+        data-pagination="true"
+        data-search="true" >
+          <thead>
+            <tr>
+              <th></th>
+              <th class="text-center"  data-field="driverId" data-sortable="true">
+                <div>
+                  Id#
+                </div>
+              </th>
+              <th data-field="status" data-sortable="true">
+                <div>
+                  Status
+                </div>
+              </th>
+              <th data-field="firstName" data-sortable="true">
+                <div>
+                  First Name
+                </div>
+              </th>
+              <th data-field="lastName" data-sortable="true">
+                <div>
+                  Last Name
+                </div>
+              </th>
+              <th> D.O.B.</th>
+              <th>S.S.N.</th>
+              <th>Address 1</th>
+              <th>Address 2</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip</th>
+              <th>Email</th>
+              <th>Phone 1</th>
+              <th>Phone 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <% for(let driver of drivers) {  %>
+              <tr>
+                <td><a href="/drivers/<%= driver._id %>"><i class="bi bi-info-circle"></i></a></td>
+                  <td><%= driver.driverId %></td>  
+                  <td><%= driver.status %></td>
+                  <td><%= driver.firstName %></td>
+                  <td><%= driver.lastName %></td>
+                  <td><%= driver.birthday %></td>
+                  <td><%= driver.socialSecurity %></td>
+                  <td><%= driver.address1 %></td>
+                  <td><%= driver.address2 %></td>
+                  <td><%= driver.city %></td>
+                  <td><%= driver.state %></td>
+                  <td><%= driver.zip %></td>
+                  <td><%= driver.email %></td>
+                  <td><%= driver.phone1 %></td>
+                  <td><%= driver.phone2 %></td>
+              </tr>
+              <% } %> -->
+          </tbody>
+        </table>
+      </div>
+    </section>

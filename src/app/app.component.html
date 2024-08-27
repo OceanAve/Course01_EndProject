@@ -1,15 +1,10 @@
 
-<div>
-  <h1>This is {{ name }} First application using Angular</h1>
+<div> 
+  <app-login></app-login>
   <app-clients></app-clients>
-  <app-client-meetings></app-client-meetings> 
-  <button [disabled]="isDisabled">Submit</button>
-  <p></p>
-  <button (click)="onSave()">Save</button>
-  {{saveMessage}}
-</div>
-<div>
-  <input type="text" [(ngModel)]="message">
-  {{message}}
+  <app-client-meetings></app-client-meetings>
+  <app-projects></app-projects>
+  <app-side-bar></app-side-bar>
+
 </div>
 <router-outlet />

@@ -1,0 +1,67 @@
+<body>
+    <section class="dispatchDashboard">
+      <div  class="tableContainer">
+        <div class="title">
+          <div class="titleImgContainer">
+            <i class="bi bi-coin"></i>
+          <h2> Projects</h2>
+          </div>
+          <a href="/payrolls/new">
+            <div class="newBtn">
+              <i class="bi bi-plus-circle"></i> New Project
+             </div>
+          </a>  
+        </div>
+        <hr>
+        <h6 style="color: rgb(0, 140, 255)">Pending Projects</h6>
+        <table class="dispatchTable searchable table" 
+          data-sort-name="paidDate" 
+          data-sort-order="desc"
+          data-toggle="table" 
+          data-pagination="true"
+          data-search="true">
+          <thead>
+            <tr>
+              <th></th>
+              <th data-field="id" data-sortable="true">
+                <div >
+                    Setlmt #
+                </div>
+              </th>
+              <th data-field="driver" data-sortable="true">
+                <div >
+                    Driver
+                </div>
+              </th>
+              <th>Dispatch Pro #</th>
+              <th>Dispatched</th>
+              <th>Completed</th>
+              <th>Gross Pay</th>
+              <th>Deductions</th>
+              <th>Net Pay</th>
+              <th data-field="paidDate" data-sortable="true">
+                <div >
+                  Paid Date
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <!-- <tbody>
+            <% for(let payroll of payrolls) {  %>
+            <tr>
+              <td><a href="/payrolls/<%= payroll._id %>"><i class="bi bi-info-circle"></i></a></td>
+              <td ><%= payroll.settlementNumber %></td> 
+              <td ><%= payroll.driver %></td>
+              <td ><%= payroll.dispatchedOn %></td>
+              <td ><%= payroll.dispatchCompletedOn %></td>
+              <td>$<%= payroll.grossPay %></td>
+              <td>$<%= payroll.deductions %></td>
+              <td>$<%= payroll.grossPay - payroll.deductions %></td>
+              <td><%= payroll.paidDate %></td>
+            </tr>
+            <% } %>
+          </tbody> -->
+        </table>
+      </div>
+    </section>
+</body>
