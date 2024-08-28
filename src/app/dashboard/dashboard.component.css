@@ -1,0 +1,10 @@
+li {
+  margin: 0px 25px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none !important;
+  color: #fff;
+  cursor: pointer;
+}

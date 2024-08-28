@@ -3,8 +3,8 @@
       <div  class="tableContainer">
         <div class="title">
           <div class="titleImgContainer">
-            <i class="bi bi-coin"></i>
-          <h2> Projects</h2>
+            <!-- <i class="bi bi-coin"></i> -->
+          <h3> Projects</h3>
           </div>
           <a href="/payrolls/new">
             <div class="newBtn">
@@ -13,8 +13,8 @@
           </a>  
         </div>
         <hr>
-        <h6 style="color: rgb(0, 140, 255)">Pending Projects</h6>
-        <table class="dispatchTable searchable table" 
+        <!-- <h6 style="color: rgb(0, 140, 255)">Pending Projects</h6> -->
+        <table class="dispatchTable searchable table table-striped" 
           data-sort-name="paidDate" 
           data-sort-order="desc"
           data-toggle="table" 
@@ -22,42 +22,90 @@
           data-search="true">
           <thead>
             <tr>
-              <th></th>
               <th data-field="id" data-sortable="true">
                 <div >
-                    Setlmt #
+                   Project ID#
                 </div>
               </th>
               <th data-field="driver" data-sortable="true">
                 <div >
-                    Driver
+                    Client ID#
                 </div>
               </th>
-              <th>Dispatch Pro #</th>
-              <th>Dispatched</th>
-              <th>Completed</th>
-              <th>Gross Pay</th>
-              <th>Deductions</th>
-              <th>Net Pay</th>
-              <th data-field="paidDate" data-sortable="true">
-                <div >
-                  Paid Date
-                </div>
-              </th>
+              <th>Client Name</th>
+              <th>Project Name</th>
+              <th data-field="startDate" data-sortable="true">Start Date</th>
+              <th data-field="dueDate" data-sortable="true">Due Date</th>
+              <th>Status</th>
+              <th>Actions</th>
             </tr>
           </thead>
+          <tbody>
+            <tr>
+              <td>26</td>
+              <td>12</td>
+              <td>Company 2</td>
+              <td>School</td>
+              <td>08/15/2024</td>
+              <td>12/15/2024</td>
+              <td>Designs Submitted</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>12</td>
+              <td>Company 2</td>
+              <td>School</td>
+              <td>08/15/2024</td>
+              <td>12/15/2024</td>
+              <td>Designs Submitted</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>12</td>
+              <td>Company 2</td>
+              <td>School</td>
+              <td>08/15/2024</td>
+              <td>12/15/2024</td>
+              <td>Designs Submitted</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>12</td>
+              <td>Company 2</td>
+              <td>School</td>
+              <td>08/15/2024</td>
+              <td>12/15/2024</td>
+              <td>Designs Submitted</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>12</td>
+              <td>Company 2</td>
+              <td>School</td>
+              <td>08/15/2024</td>
+              <td>12/15/2024</td>
+              <td>Designs Submitted</td>
+              <td><button>View</button></td>
+            </tr>
+            
+
+            </tbody>
           <!-- <tbody>
             <% for(let payroll of payrolls) {  %>
             <tr>
-              <td><a href="/payrolls/<%= payroll._id %>"><i class="bi bi-info-circle"></i></a></td>
-              <td ><%= payroll.settlementNumber %></td> 
-              <td ><%= payroll.driver %></td>
-              <td ><%= payroll.dispatchedOn %></td>
-              <td ><%= payroll.dispatchCompletedOn %></td>
-              <td>$<%= payroll.grossPay %></td>
-              <td>$<%= payroll.deductions %></td>
-              <td>$<%= payroll.grossPay - payroll.deductions %></td>
-              <td><%= payroll.paidDate %></td>
+              <td><a href="/payrolls/<%= project.project_id %>"><i class="bi bi-info-circle"></i></a></td>
+              <td ><%= project.client_id %></td> 
+              <td ><%= project.client_name %></td>
+              <td ><%= project.project_name %></td>
+              <td ><%= project.project_description %></td>
+              <td><%= project.startDate %></td>
+              <td>$<%= project.project_due_date %></td>
+              <td>$<%= project.project_status %></td>
+              <td>$<%= project.project_priority %></td>
             </tr>
             <% } %>
           </tbody> -->

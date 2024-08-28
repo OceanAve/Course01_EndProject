@@ -2,17 +2,17 @@
     <div  class="tableContainer">
         <div class="title">
             <div class="titleImgContainer">
-                <i class="bi bi-geo-alt"></i>
-                <h2>Client Meetings</h2>
+                <!-- <i class="bi bi-geo-alt"></i> -->
+                <h3>Client Meetings</h3>
             </div>
             <a href="/dispatches/new">
                 <div class="newBtn">
-                    <i class="bi bi-plus-circle"></i> New Dispatch
+                    <i class="bi bi-plus-circle"></i> New Meeting
                 </div>
             </a>  
         </div>
         <hr>
-        <table class="dispatchTable searchable table" 
+        <table class="dispatchTable searchable table table-striped" 
             data-sort-name="pickupDate" 
             data-sort-order="desc"
             data-toggle="table" 
@@ -20,64 +20,88 @@
             data-search="true" >
             <thead>
                 <tr>
-                    <th></th>
-                    <th class="text-center" data-field="proNumber" data-sortable="true">
+                    <th class="text-center" data-field="client_id" data-sortable="true">
                         <div>
-                            Pro #
+                            Client ID#
                         </div>
                     </th>
-                    <th data-field="status" data-sortable="true">
+                    <th data-field="meeting_id" class="text-center" data-sortable="true">
                             <div >
-                                Status
+                               Meeting ID#
+                        </div>
+                    </th>
+                    <th class="text-center" data-field="meetingDay" data-sortable="true">
+                        <div>
+                            Date
                         </div>
                     </th>
                     <th class="text-center" data-field="unit" data-sortable="true">
                         <div>
-                            Unit
+                            Time
                         </div>
                     </th>
-                    <th data-field="driver" data-sortable="true">
+                    <th data-field="meeting_location" data-sortable="true">
                         <div>
-                            Driver
+                            Meeting_location
                         </div>
                     </th>
-                    <th data-field="pickupDate" data-sortable="true">
+                    <th data-field="agenda" data-sortable="true">
                         <div>
-                            Picked-up
+                            Actions
                         </div>
                     </th>
-                    <th><i class="bi bi-geo"></i>  Origin</th>
-                    <th><i class="bi bi-geo-alt"></i> Destination</th>
-                    <th data-field="deliverDate" data-sortable="true">
-                        <div>
-                            Delivered
-                        </div>
-                    </th>
-                    <th class="text-center col-sm-auto">Trip Miles</th>
-                    <th>Duration</th>
-                    <!-- <th class="text-center">Pay Rate</th> -->
-                    <th class="text-center">Drivers Pay</th>
-                    
-                    <th>Customer</th>
                 </tr>
             </thead>    
             <tbody>
-                <!-- <% for(let dispatch of dispatches) { %>
-                <tr class="<%= dispatch.status %>">
+                <tr>
+                    <td class="text-center">12</td>
+                    <td class="text-center">45</td>
+                    <td>08/28/2024</td>
+                    <td>10:00 AM to 10:30 AM</td>
+                    <td>zoom</td>
+                    <td><button>View</button></td>
+                </tr>
+                <tr>
+                    <td class="text-center">12</td>
+                    <td class="text-center">45</td>
+                    <td>08/28/2024</td>
+                    <td>10:00 AM to 10:30 AM</td>
+                    <td>zoom</td>
+                    <td><button>View</button></td>
+                </tr>
+                <tr>
+                    <td class="text-center">12</td>
+                    <td class="text-center">45</td>
+                    <td>08/28/2024</td>
+                    <td>10:00 AM to 10:30 AM</td>
+                    <td>zoom</td>
+                    <td><button>View</button></td>
+                </tr>
+                <tr>
+                    <td class="text-center">12</td>
+                    <td class="text-center">45</td>
+                    <td>08/28/2024</td>
+                    <td>10:00 AM to 10:30 AM</td>
+                    <td>Conference Rm</td>
+                    <td><button>View</button></td>
+                </tr>
+
+                <!-- <% for(let clientMeeting of clientMeetings) { %>
+                <tr class="<%= clientMeetings.status %>">
                     <td><a href="/dispatches/<%= dispatch._id %>"><i class="bi bi-info-circle"></i></a></td>
-                    <td># <%= dispatch.proNumber %></td>
-                    <td class="status" value="<%= dispatch.status %>"><%= dispatch.status %></td>
-                    <td># <%= dispatch.unit %></td>
-                    <td><%= dispatch.driver %></td>
-                    <td><%= dispatch.pickupDate %></td>
-                    <td><%= dispatch.origin %></td>
-                    <td><%= dispatch.destination %></td>
-                    <td><%= dispatch.deliverDate %></td>
-                    <td><%= dispatch.tripMiles %> ml</td>
-                    <td><%= dispatch.duration %></td>
-                    <td><%= dispatch.payRate %></td>
-                    <td>$<%= dispatch.grossPay %></td>
-                    <td><%= dispatch.customer %></td>
+                    <td># <%= clientMeeting.proNumber %></td>
+                    <td class="status" value="<%= dispatch.status %>"><%= clientMeeting.status %></td>
+                    <td># <%= clientMeeting.unit %></td>
+                    <td><%= clientMeeting.driver %></td>
+                    <td><%= clientMeeting.pickupDate %></td>
+                    <td><%= clientMeeting.origin %></td>
+                    <td><%= clientMeeting.destination %></td>
+                    <td><%= clientMeeting.deliverDate %></td>
+                    <td><%= clientMeeting.tripMiles %> ml</td>
+                    <td><%= clientMeeting.duration %></td>
+                    <td><%= clientMeeting.payRate %></td>
+                    <td>$<%= clientMeeting.grossPay %></td>
+                    <td><%= clientMeeting.customer %></td>
                 </tr>
                 <% } %> -->
             </tbody>

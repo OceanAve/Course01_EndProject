@@ -3,6 +3,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   background: #003554;
+  width: 250px;
+  height: 100%;
 }
 .sideNav a {
   text-decoration: none;
@@ -19,6 +21,7 @@
 .sideNav .navLink:hover {
   background: linear-gradient(to right, #2b6a85, #003554);
   color: #ffdd88;
+  cursor: pointer;
 }
 .sideNav .navLink h2 {
   margin-top: 0.5rem;
@@ -31,3 +34,12 @@
   text-decoration: none;
   color: #ffffff;
 } /*# sourceMappingURL=sidenav.css.map */
+
+.activeLink {
+  background: linear-gradient(to right, #2b6a85, #003554);
+  color: #ffdd88;
+}
+.activeLink h2 a {
+  text-decoration: none;
+  color: #ffdd88;
+}

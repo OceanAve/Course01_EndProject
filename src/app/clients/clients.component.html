@@ -3,7 +3,7 @@
       <div  class="tableContainer">
         <div class="title">
           <div class="titleImgContainer">
-            <i class="bi bi-person"></i>
+            <!-- <i class="bi bi-person"></i> -->
             <h3>Clients</h3>
           </div>
           <a href="/drivers/new">                       
@@ -13,7 +13,7 @@
           </a>  
         </div>
         <hr>
-        <table class="dispatchTable searchable table"                     
+        <table class="dispatchTable searchable table table-striped"                     
         data-sort-name="status:active" 
         data-sort-order="asc"
         data-toggle="table" 
@@ -21,7 +21,6 @@
         data-search="true" >
           <thead>
             <tr>
-              <th></th>
               <th class="text-center"  data-field="driverId" data-sortable="true">
                 <div>
                   Id#
@@ -29,9 +28,14 @@
               </th>
               <th data-field="status" data-sortable="true">
                 <div>
-                  Status
+                  Company Name
                 </div>
               </th>
+              <th>Address 1</th>
+              <th>Address 2</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip</th>
               <th data-field="firstName" data-sortable="true">
                 <div>
                   First Name
@@ -42,19 +46,105 @@
                   Last Name
                 </div>
               </th>
-              <th> D.O.B.</th>
-              <th>S.S.N.</th>
-              <th>Address 1</th>
-              <th>Address 2</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Zip</th>
               <th>Email</th>
-              <th>Phone 1</th>
-              <th>Phone 2</th>
+              <th>Bus. Phone</th>
+              <th>Mobile Phone</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>15</td>
+              <td>Company 1</td>
+              <td>123 Main St.</td>
+              <td>Suite 401</td>
+              <td>Los Angeles</td>
+              <td>CA</td>
+              <td>91030</td>
+              <td>Jim</td>
+              <td>Smith</td>
+              <td>jim&#64;company1.com</td>
+              <td>312-1568-7589</td>
+              <td>915-489-9875</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Company 1</td>
+              <td>123 Main St.</td>
+              <td>Suite 401</td>
+              <td>Los Angeles</td>
+              <td>CA</td>
+              <td>91030</td>
+              <td>Jim</td>
+              <td>Smith</td>
+              <td>jim&#64;company1.com</td>
+              <td>312-1568-7589</td>
+              <td>915-489-9875</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Company 1</td>
+              <td>123 Main St.</td>
+              <td>Suite 401</td>
+              <td>Los Angeles</td>
+              <td>CA</td>
+              <td>91030</td>
+              <td>Jim</td>
+              <td>Smith</td>
+              <td>jim&#64;company1.com</td>
+              <td>312-1568-7589</td>
+              <td>915-489-9875</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Company 1</td>
+              <td>123 Main St.</td>
+              <td>Suite 401</td>
+              <td>Los Angeles</td>
+              <td>CA</td>
+              <td>91030</td>
+              <td>Jim</td>
+              <td>Smith</td>
+              <td>jim&#64;company1.com</td>
+              <td>312-1568-7589</td>
+              <td>915-489-9875</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Company 1</td>
+              <td>123 Main St.</td>
+              <td>Suite 401</td>
+              <td>Los Angeles</td>
+              <td>CA</td>
+              <td>91030</td>
+              <td>Jim</td>
+              <td>Smith</td>
+              <td>jim&#64;company1.com</td>
+              <td>312-1568-7589</td>
+              <td>915-489-9875</td>
+              <td><button>View</button></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Company 1</td>
+              <td>123 Main St.</td>
+              <td>Suite 401</td>
+              <td>Los Angeles</td>
+              <td>CA</td>
+              <td>91030</td>
+              <td>Jim</td>
+              <td>Smith</td>
+              <td>jim&#64;company1.com</td>
+              <td>312-1568-7589</td>
+              <td>915-489-9875</td>
+              <td><button>View</button></td>
+            </tr>
+
+
             <!-- <% for(let driver of drivers) {  %>
               <tr>
                 <td><a href="/drivers/<%= driver._id %>"><i class="bi bi-info-circle"></i></a></td>
