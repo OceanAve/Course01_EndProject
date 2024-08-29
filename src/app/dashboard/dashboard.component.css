@@ -1,10 +1,21 @@
 li {
   margin: 0px 25px;
   color: #fff;
+  font-size: 20px;
+}
+a:hover {
+  color: #f0e3bd;
 }
 
 a {
   text-decoration: none !important;
   color: #fff;
+  right: 50px;
+  cursor: pointer;
+}
+
+.logoutNav {
+  color: #fff;
+  font-size: 20px;
   cursor: pointer;
 }

@@ -1,53 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg bg-primary">
   <div class="container-fluid">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="navLink" routerLink="/" >
           <!-- <i class="bi bi-person"></i> -->
-          <h3>Projects</h3>
+          <div>Projects</div>
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="navLink" routerLink="/clients" >
           <!-- <i class="bi bi-geo-alt"></i> -->
-          <h3>Clients</h3>
+          <div>Clients</div>
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="navLink" routerLink="/client-meetings">
           <!-- <i class="bi bi-coin"></i> -->
-          <h3>Client Meetings</h3>
-        </a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="navLink" routerLink="/login" >
-          <!-- <i class="bi bi-power"></i> -->
-          <h3> Logout </h3>
+          <div>Client Meetings</div>
         </a>
       </li>
     </ul>
+    <div class="logoutNav nav-item" routerLinkActive="active">
+      <a class="navLink"  (click)="onLogout()">Logout</a>
+    </div>
   </div>
 </nav>
 
 <router-outlet></router-outlet>
-
-<!-- <div class="sideNav">
-    <div ><a routerLink="/clients" class="navLink">
-      <i class="bi bi-geo-alt"></i>
-      <h2>Clients</h2></a>
-    </div>
-    <div class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/client-meetings" class="navLink">
-      <i class="bi bi-coin"></i>
-      <h2>Client Meetings</h2></a>
-    </div>
-    <div ><a routerLink="/projects" class="navLink">
-      <i class="bi bi-person"></i>
-      <h2>Projects</h2></a>
-    </div>
-    <div ><a routerLink="/" class="navLink">
-      <i class="bi bi-power"></i>
-      <h2> Logout </h2></a>
-    </div>
-</div> -->
 
   

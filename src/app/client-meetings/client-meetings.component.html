@@ -3,9 +3,9 @@
         <div class="title">
             <div class="titleImgContainer">
                 <!-- <i class="bi bi-geo-alt"></i> -->
-                <h3>Client Meetings</h3>
+                <h3><i class="bi bi-calendar-event"></i> Client Meetings</h3>
             </div>
-            <a href="/dispatches/new">
+            <a href="/client-meetings/new">
                 <div class="newBtn">
                     <i class="bi bi-plus-circle"></i> New Meeting
                 </div>
@@ -54,74 +54,18 @@
             </thead>    
             <tbody>
                 <tr>
-                    <td class="text-center">12</td>
-                    <td class="text-center">45</td>
-                    <td>08/28/2024</td>
-                    <td>10:00 AM to 10:30 AM</td>
-                    <td>zoom</td>
-                    <td><button>View</button></td>
+                    <tr *ngFor="let clientMeeting of clientMeeting; let i = index">
+                    <!-- <th>{{i+1}}</th> -->
+                    <td class="text-center">{{clientMeeting.client_id}}</td>
+                    <td class="text-center">{{clientMeeting.meeting_id}}</td>
+                    <td>{{clientMeeting.meeting_date}}</td>
+                    <td>{{clientMeeting.meeting_time}}</td>
+                    <td>{{clientMeeting.meeting_location}}</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">View</button></td>
                 </tr>
-                <tr>
-                    <td class="text-center">12</td>
-                    <td class="text-center">45</td>
-                    <td>08/28/2024</td>
-                    <td>10:00 AM to 10:30 AM</td>
-                    <td>zoom</td>
-                    <td><button>View</button></td>
-                </tr>
-                <tr>
-                    <td class="text-center">12</td>
-                    <td class="text-center">45</td>
-                    <td>08/28/2024</td>
-                    <td>10:00 AM to 10:30 AM</td>
-                    <td>zoom</td>
-                    <td><button>View</button></td>
-                </tr>
-                <tr>
-                    <td class="text-center">12</td>
-                    <td class="text-center">45</td>
-                    <td>08/28/2024</td>
-                    <td>10:00 AM to 10:30 AM</td>
-                    <td>Conference Rm</td>
-                    <td><button>View</button></td>
-                </tr>
-
-                <!-- <% for(let clientMeeting of clientMeetings) { %>
-                <tr class="<%= clientMeetings.status %>">
-                    <td><a href="/dispatches/<%= dispatch._id %>"><i class="bi bi-info-circle"></i></a></td>
-                    <td># <%= clientMeeting.proNumber %></td>
-                    <td class="status" value="<%= dispatch.status %>"><%= clientMeeting.status %></td>
-                    <td># <%= clientMeeting.unit %></td>
-                    <td><%= clientMeeting.driver %></td>
-                    <td><%= clientMeeting.pickupDate %></td>
-                    <td><%= clientMeeting.origin %></td>
-                    <td><%= clientMeeting.destination %></td>
-                    <td><%= clientMeeting.deliverDate %></td>
-                    <td><%= clientMeeting.tripMiles %> ml</td>
-                    <td><%= clientMeeting.duration %></td>
-                    <td><%= clientMeeting.payRate %></td>
-                    <td>$<%= clientMeeting.grossPay %></td>
-                    <td><%= clientMeeting.customer %></td>
-                </tr>
-                <% } %> -->
+               
             </tbody>
         </table>
         </div>
     <!-- </div> -->
 </section>
-
-<script>
-    const rows = document.querySelectorAll('tr'); 
-    // Loop through rows
-    rows.forEach(row => {
-    // Check if row has specific class
-    if(row.classList.contains('Dispatched')) {
-    row.style.backgroundColor = 'rgb(53, 196, 98, .1)';
-    }else if(row.classList.contains('Pending')) {
-        row.style.backgroundColor = ' rgb(255, 195, 189, 0.5)';
-    }
-    else if(row.classList.contains('Paid')) {
-        row.style.backgroundColor = 'rgb(171, 171, 171, .5)';
-    }
-});
-</script> 

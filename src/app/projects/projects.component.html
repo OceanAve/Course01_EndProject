@@ -4,16 +4,16 @@
         <div class="title">
           <div class="titleImgContainer">
             <!-- <i class="bi bi-coin"></i> -->
-          <h3> Projects</h3>
+            
+          <h3><i class="bi bi-building"></i> Projects</h3>
           </div>
-          <a href="/payrolls/new">
+          <a href="/projects/new">
             <div class="newBtn">
               <i class="bi bi-plus-circle"></i> New Project
              </div>
           </a>  
         </div>
         <hr>
-        <!-- <h6 style="color: rgb(0, 140, 255)">Pending Projects</h6> -->
         <table class="dispatchTable searchable table table-striped" 
           data-sort-name="paidDate" 
           data-sort-order="desc"
@@ -27,13 +27,14 @@
                    Project ID#
                 </div>
               </th>
-              <th data-field="driver" data-sortable="true">
+              <th data-field="client_id" data-sortable="true">
                 <div >
                     Client ID#
                 </div>
               </th>
               <th>Client Name</th>
               <th>Project Name</th>
+              <th>Project Description</th>
               <th data-field="startDate" data-sortable="true">Start Date</th>
               <th data-field="dueDate" data-sortable="true">Due Date</th>
               <th>Status</th>
@@ -41,74 +42,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>26</td>
-              <td>12</td>
-              <td>Company 2</td>
-              <td>School</td>
-              <td>08/15/2024</td>
-              <td>12/15/2024</td>
-              <td>Designs Submitted</td>
-              <td><button>View</button></td>
+            <tr *ngFor="let project of project; let i = index">
+              <!-- <th>{{i+1}}</th> -->
+              <td>{{ project.project_id }}</td>
+              <td>{{ project.client_id }}</td>
+              <td>{{ project.client_name }}</td>
+              <td>{{ project.project_name }}</td>
+              <td>{{ project.project_description }}</td>
+              <td>{{ project.project_start_date }}</td>
+              <td>{{ project.project_due_date }}</td>
+              <td>{{ project.project_status }}</td>
+              <td><button type="button" class="btn btn-primary btn-sm" (click)="onViewClient(project.client_id)">View</button></td>
             </tr>
-            <tr>
-              <td>26</td>
-              <td>12</td>
-              <td>Company 2</td>
-              <td>School</td>
-              <td>08/15/2024</td>
-              <td>12/15/2024</td>
-              <td>Designs Submitted</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>26</td>
-              <td>12</td>
-              <td>Company 2</td>
-              <td>School</td>
-              <td>08/15/2024</td>
-              <td>12/15/2024</td>
-              <td>Designs Submitted</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>26</td>
-              <td>12</td>
-              <td>Company 2</td>
-              <td>School</td>
-              <td>08/15/2024</td>
-              <td>12/15/2024</td>
-              <td>Designs Submitted</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>26</td>
-              <td>12</td>
-              <td>Company 2</td>
-              <td>School</td>
-              <td>08/15/2024</td>
-              <td>12/15/2024</td>
-              <td>Designs Submitted</td>
-              <td><button>View</button></td>
-            </tr>
-            
-
             </tbody>
-          <!-- <tbody>
-            <% for(let payroll of payrolls) {  %>
-            <tr>
-              <td><a href="/payrolls/<%= project.project_id %>"><i class="bi bi-info-circle"></i></a></td>
-              <td ><%= project.client_id %></td> 
-              <td ><%= project.client_name %></td>
-              <td ><%= project.project_name %></td>
-              <td ><%= project.project_description %></td>
-              <td><%= project.startDate %></td>
-              <td>$<%= project.project_due_date %></td>
-              <td>$<%= project.project_status %></td>
-              <td>$<%= project.project_priority %></td>
-            </tr>
-            <% } %>
-          </tbody> -->
         </table>
       </div>
     </section>

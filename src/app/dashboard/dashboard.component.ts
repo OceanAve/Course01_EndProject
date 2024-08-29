@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+// import {ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,5 +10,16 @@ import { RouterModule } from '@angular/router';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  @Output()
+  userAuthenticated = new EventEmitter<boolean>();
+
+  // constructor(private toastr: ToastrService) { };
+  
+  onLogout(): void {
+    console.log('logout submitted');
+    this.userAuthenticated.emit(false);
+    // this.toastr.success('Login Successful', 'CMA Login');
+  }
+
 
 }

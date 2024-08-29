@@ -1,12 +1,10 @@
 
-<div> 
-  <app-dashboard></app-dashboard>
-  <!-- <app-login></app-login> -->
-  <!-- <app-clients></app-clients> -->
-  <!-- <app-client-meetings></app-client-meetings> -->
-  <!-- <app-projects></app-projects> -->
-
-  <!-- <app-side-bar></app-side-bar> -->
+<div>
+  <app-login *ngIf="!authenticated" (userAuthenticated)="onAuthenticated($event)"/> 
+  <app-dashboard *ngIf="authenticated" (userAuthenticated)="onAuthenticated($event)"/>
+  <!-- <app-login *ngIf="!authenticated"/>  -->
+  <!-- <app-dashboard *ngIf="!authenticated"/> -->
+   <!-- <app-login></app-login> -->
 </div>
 
-
+<!-- <router-outlet></router-outlet> -->
